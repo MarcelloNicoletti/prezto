@@ -11,3 +11,10 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+# Functions
+if [[ "$OSTYPE" == darwin* ]]; then
+  function school {
+    cdls "$HOME/Documents/School/Spring_18/$1"*
+  }
+fi

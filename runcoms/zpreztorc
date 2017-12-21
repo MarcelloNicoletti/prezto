@@ -38,15 +38,18 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'utility' \
   'completion' \
+  'prompt' \
+  'archive' \
   'history-substring-search' \
-  'prompt'
+  'osx' \
+  'screen'
 
 #
 # Autosuggestions
 #
 
 # Set the query found color.
-# zstyle ':prezto:module:autosuggestions:color' found ''
+zstyle ':prezto:module:autosuggestions:color' found ''
 
 #
 # Completions
@@ -88,20 +91,20 @@ zstyle ':prezto:module:editor' key-bindings 'emacs'
 #
 
 # Set the query found color.
-# zstyle ':prezto:module:history-substring-search:color' found ''
+zstyle ':prezto:module:history-substring-search:color' found 'bg=11,fg=white,bold'
 
 # Set the query not found color.
-# zstyle ':prezto:module:history-substring-search:color' not-found ''
+zstyle ':prezto:module:history-substring-search:color' not-found 'bg=red,fg=white,bold'
 
 # Set the search globbing flags.
-# zstyle ':prezto:module:history-substring-search' globbing-flags ''
+zstyle ':prezto:module:history-substring-search' globbing-flags 'i'
 
 #
 # macOS
 #
 
 # Set the keyword used by `mand` to open man pages in Dash.app
-# zstyle ':prezto:module:osx:man' dash-keyword 'manpages'
+zstyle ':prezto:module:osx:man' dash-keyword 'manpages'
 
 #
 # Pacman
@@ -117,12 +120,12 @@ zstyle ':prezto:module:editor' key-bindings 'emacs'
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
-zstyle ':prezto:module:prompt' theme 'sorin'
+zstyle ':prezto:module:prompt' theme 'agnoster'
 
 # Set the working directory prompt display length.
 # By default, it is set to 'short'. Set it to 'long' (without '~' expansion)
 # for longer or 'full' (with '~' expansion) for even longer prompt display.
-# zstyle ':prezto:module:prompt' pwd-length 'short'
+zstyle ':prezto:module:prompt' pwd-length 'short'
 
 # Set the prompt to display the return code along with an indicator for non-zero
 # return codes. This is not supported by all prompts.
@@ -153,7 +156,7 @@ zstyle ':prezto:module:prompt' theme 'sorin'
 # zstyle ':prezto:module:screen:auto-start' local 'yes'
 
 # Auto start a session when Zsh is launched in a SSH connection.
-# zstyle ':prezto:module:screen:auto-start' remote 'yes'
+zstyle ':prezto:module:screen:auto-start' remote 'yes'
 
 #
 # SSH
@@ -191,16 +194,16 @@ zstyle ':prezto:module:prompt' theme 'sorin'
 #
 
 # Auto set the tab and window titles.
-# zstyle ':prezto:module:terminal' auto-title 'yes'
+zstyle ':prezto:module:terminal' auto-title 'yes'
 
 # Set the window title format.
-# zstyle ':prezto:module:terminal:window-title' format '%n@%m: %s'
+zstyle ':prezto:module:terminal:window-title' format '%n@%m: %s'
 
 # Set the tab title format.
-# zstyle ':prezto:module:terminal:tab-title' format '%m: %s'
+zstyle ':prezto:module:terminal:tab-title' format '%m: %s'
 
 # Set the terminal multiplexer title format.
-# zstyle ':prezto:module:terminal:multiplexer-title' format '%s'
+zstyle ':prezto:module:terminal:multiplexer-title' format '%s'
 
 #
 # Tmux
