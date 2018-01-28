@@ -22,3 +22,6 @@ if [[ "$OSTYPE" == darwin* ]]; then
     /Applications/Xcode.app/Contents/Applications/FileMerge.app/Contents/MacOS/FileMerge -left $1 -right $2
   }
 fi
+
+# Ignore spaced lines
+HIST_IGNORE_SPACE="YES"
