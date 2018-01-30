@@ -41,8 +41,7 @@ zstyle ':prezto:load' pmodule \
   'prompt' \
   'archive' \
   'history-substring-search' \
-  'osx' \
-  'screen'
+  'osx'
 
 #
 # Autosuggestions
