@@ -17,7 +17,7 @@ fi
 # Editors
 #
 
-export EDITOR="emacsclient -t -a '$( which nano )'"
+export EDITOR=nano
 export VISUAL=$EDITOR
 export PAGER='less'
 
