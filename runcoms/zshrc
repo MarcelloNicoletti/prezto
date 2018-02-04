@@ -25,3 +25,4 @@ fi
 
 # Ignore spaced lines
 HIST_IGNORE_SPACE="YES"
+alias exit=" exit"
