@@ -26,6 +26,7 @@ fi
 # Ignore spaced lines
 HIST_IGNORE_SPACE="YES"
 alias exit=" exit"
+alias clear=" clear"
 
 # Rbenv initialization
 export PATH="$HOME/.rbenv/bin:$PATH"
