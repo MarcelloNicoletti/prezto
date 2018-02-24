@@ -23,7 +23,8 @@ if [[ "$OSTYPE" == darwin* ]]; then
   }
 fi
 
-# Ignore spaced lines
+# History Adjustments
+SAVEHIST=100000
 HIST_IGNORE_SPACE="YES"
 alias exit=" exit"
 alias clear=" clear"
