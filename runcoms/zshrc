@@ -1,3 +1,4 @@
+#! /usr/bin/env zsh
 #
 # Executes commands at the start of an interactive session.
 #
@@ -11,6 +12,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+# Disable username in prompt
+DEFAULT_USER="$(whoami)"
 
 # Functions
 if [[ "$OSTYPE" == darwin* ]]; then
