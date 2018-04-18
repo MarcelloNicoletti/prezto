@@ -38,3 +38,12 @@ if [[ -d "$HOME/.rbenv" ]]; then
   export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)"
 fi
+
+# tmux aliases
+if (( $+commands[tmux] )); then
+  alias ttmux="tmux new-session -A -s tmux"
+  function codemux () {
+    local dir="$(basename "$(pwd)" | sed "s/[^[:alpha:]^[:digit:]]//g")"
+    exec "tmux" "new-session" "-A" "-s" "code-$dir"
+  }
+fi
