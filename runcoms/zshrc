@@ -47,3 +47,6 @@ if (( $+commands[tmux] )); then
     exec "tmux" "new-session" "-A" "-s" "code-$dir"
   }
 fi
+
+# time aliases
+alias 8601="date -u +\"%FT%TZ\""
