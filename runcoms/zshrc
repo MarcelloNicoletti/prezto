@@ -41,8 +41,19 @@ fi
 
 # tmux aliases
 if (( $+commands[tmux] )); then
-  alias ttmux="tmux new-session -A -s tmux"
+  function ttmux () {
+    if (( ${+TMUX} )); then
+      echo "Don't nest tmux sessions with this exec method."
+      return
+    fi
+    exec "tmux" "new-session" "-A" "-s" "tmux"
+  }
+
   function codemux () {
+    if (( ${+TMUX} )); then
+      echo "Don't nest tmux sessions with this exec method."
+      return
+    fi
     local dir="$(basename "$(pwd)" | sed "s/[^[:alpha:]^[:digit:]]//g")"
     exec "tmux" "new-session" "-A" "-s" "code-$dir"
   }
