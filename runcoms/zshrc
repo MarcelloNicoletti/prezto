@@ -18,10 +18,6 @@ DEFAULT_USER="$(whoami)"
 
 # Functions
 if [[ "$OSTYPE" == darwin* ]]; then
-  function school {
-    cdls "$HOME/Documents/School/Spring_18/$1"*
-  }
-
   function filemerge {
     /Applications/Xcode.app/Contents/Applications/FileMerge.app/Contents/MacOS/FileMerge -left $1 -right $2
   }
