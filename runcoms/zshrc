@@ -21,6 +21,26 @@ if [[ "$OSTYPE" == darwin* ]]; then
   function filemerge {
     /Applications/Xcode.app/Contents/Applications/FileMerge.app/Contents/MacOS/FileMerge -left $1 -right $2
   }
+
+  function mactrash () {
+    local dir="$(pwd)"
+    for partial in $@; do
+      local file="$dir/$partial"
+      if [[ $partial == /* ]]; then
+        file="$partial"
+      fi
+      if [ -e "$file" ]; then
+        osascript -e "
+set posixFile to POSIX file \"$file\"
+tell application \"Finder\"
+  move posixFile to trash
+end tell
+"
+      else
+        echo "$partial not found"
+      fi
+    done
+  }
 fi
 
 # History Adjustments
