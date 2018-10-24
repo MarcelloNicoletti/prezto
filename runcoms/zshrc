@@ -55,6 +55,12 @@ if [[ -d "$HOME/.rbenv" ]]; then
   eval "$(rbenv init -)"
 fi
 
+# Jenv initialization
+if [[ -d "$HOME/.jenv" ]]; then
+  export PATH="$HOME/.jenv/bin:$PATH"
+  eval "$(jenv init -)"
+fi
+
 # tmux aliases
 if (( $+commands[tmux] )); then
   function ttmux () {
