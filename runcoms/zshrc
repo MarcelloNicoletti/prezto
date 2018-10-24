@@ -50,15 +50,18 @@ alias exit=" exit"
 alias clear=" clear"
 
 # Rbenv initialization
-if [[ -d "$HOME/.rbenv" ]]; then
-  export PATH="$HOME/.rbenv/bin:$PATH"
+if (( $+commands[rbenv] )); then
   eval "$(rbenv init -)"
 fi
 
 # Jenv initialization
-if [[ -d "$HOME/.jenv" ]]; then
-  export PATH="$HOME/.jenv/bin:$PATH"
+if (( $+commands[jenv] )); then
   eval "$(jenv init -)"
+fi
+
+# Nodenv initialization
+if (( $+commands[nodenv] )); then
+  eval "$(nodenv init -)"
 fi
 
 # tmux aliases
