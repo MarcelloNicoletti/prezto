@@ -86,3 +86,9 @@ fi
 
 # time aliases
 alias 8601="date -u +\"%FT%TZ\""
+
+# Local computer rcs
+if [[ -e "$HOME/.zlocal" ]]; then
+  source "$HOME/.zlocal"
+fi
+
