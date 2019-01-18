@@ -87,8 +87,15 @@ fi
 # time aliases
 alias 8601="date -u +\"%FT%TZ\""
 
+# Diffing
+if (( $+commands[colordiff] )); then
+  alias diff=colordiff
+fi
+
+# Note: meant for single files
+alias gitdiff="git diff --no-index --"
+
 # Local computer rcs
 if [[ -e "$HOME/.zlocal" ]]; then
   source "$HOME/.zlocal"
 fi
-
