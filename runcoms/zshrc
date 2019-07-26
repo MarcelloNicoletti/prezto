@@ -96,6 +96,6 @@ fi
 alias gitdiff="git diff --no-index --"
 
 # Local computer rcs
-if [[ -e "$HOME/.zlocal" ]]; then
-  source "$HOME/.zlocal"
+if [[ -e "${ZDOTDIR:-$HOME}/.zlocal" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zlocal"
 fi
