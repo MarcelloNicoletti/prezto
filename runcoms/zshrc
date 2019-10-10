@@ -46,6 +46,7 @@ fi
 # History Adjustments
 SAVEHIST=100000
 HIST_IGNORE_SPACE="YES"
+HISTFILE="${ZDOTDIR:-$HOME}/.zhistory"
 alias exit=" exit"
 alias clear=" clear"
 
